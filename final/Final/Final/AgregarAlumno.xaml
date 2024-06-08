@@ -1,0 +1,40 @@
+﻿<!-- AgregarAlumnoWindow.xaml -->
+<Window x:Class="Final.AgregarAlumnoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Agregar Alumno" Height="300" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Carnet:" />
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="CarnetTextBox" />
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Nombre Completo:" />
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="NombreCompletoTextBox" />
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Teléfono:" />
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="TelefonoTextBox" />
+
+        <Label Grid.Row="3" Grid.Column="0" Content="Grado:" />
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="GradoTextBox" />
+
+        <Label Grid.Row="4" Grid.Column="0" Content="Usuario:" />
+        <ComboBox Grid.Row="4" Grid.Column="1" x:Name="UsuarioComboBox" DisplayMemberPath="NombreUsuario" SelectedValuePath="UsuarioID" />
+
+        <Button Grid.Row="5" Grid.Column="1" Content="Guardar" Click="GuardarButton_Click" HorizontalAlignment="Right" Margin="0,10,0,0" />
+    </Grid>
+</Window>
